@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Button, Form, Input,message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,13 +9,7 @@ const Loginpage= () => {
       setTimeout(message.success("Login Success"),2000)
       navigate("/resume");
       localStorage.setItem('user',values.username)
-    }
-    else if(values.username ==="admin" && values.password ==="eiei"){
-      setTimeout(message.success("Login Success"),2000)
-      navigate("/goserviceform");
-      localStorage.setItem('user',values.username)
-    }
-    else{
+    }else{
       setTimeout(message.error("Your Username or Password incorrect"),2000)
     }
   };
