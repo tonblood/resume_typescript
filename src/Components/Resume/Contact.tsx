@@ -8,10 +8,10 @@ export default function Contact() {
             <h2>My Information</h2>
 
             <Row gutter={[16, 8]}>
-                <Col span={8} xs={24} sm={24} lg={8}>
+                <Col span={8} xs={24} sm={24} md={12} lg={8}>
                     <img src={Profile} alt="Profile picture" style={{ width: '50%' }} />
                 </Col>
-                <Col span={16} xs={24} sm={24} lg={16}>
+                <Col span={16} xs={24} sm={24} md={12} lg={16}>
                     <div className="information">
                         <p ><b>Name(Eng) : </b> Apichat Moolwandee</p>
                         <p><b>Name(Tha) : </b> อภิชาติ มูลวันดี</p>
