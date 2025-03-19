@@ -19,11 +19,10 @@ const Resume = () => {
   if (!localStorage.getItem('user')) redirect('/')
   return (
     <div className={darkmode ? 'App-dark' : 'App-light'} >
-      <div className='nav'>
-        <div className='box'>
-          <p>Dark mode : <Switch className='switch' onChange={onchange} /></p>
-        </div>
+      <div style={{float: 'right'}}>
+      <p>Dark mode : <Switch className='switch' onChange={onchange} /></p>
       </div>
+      <br />
       <HeadTitle />
       <Workdetail />
       <div className='miniproject'>
@@ -44,7 +43,6 @@ const Resume = () => {
         {/* <Link type='primary' to='/feedpostaxios'> Test</Link> */}
       </div>
       <Contact />
-      <Footer />
     </div>
   )
 }

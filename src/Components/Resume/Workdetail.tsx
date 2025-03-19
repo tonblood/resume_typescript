@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Space } from 'antd';
+import { Card, Col, Row, Space } from 'antd';
 import image_badminton from '../Asset/IMG_0194.png'
 
 const { Meta } = Card;
@@ -42,15 +42,18 @@ function Workdetail() {
         <div className='Workdetail'>
             <h2>My Work</h2>
             <div className='CardContainer'>
-                {data.map((e, idx) => {
-                    return <a href={e.link} target='_blank' rel="noreferrer" key={idx}> <Card
-                        hoverable
-                        style={{ width: 250, height: 400, margin: 15, backgroundColor: '#f2f2f0' }}
-                        cover={<img alt={e.title} src={e.cover} width={'20%'}/>}>
-                        <Meta title={e.title} description={e.description} />
-                    </Card> </a>
-                })}
-
+                <Row>
+                    {data.map((e, idx) => {
+                        return <Col span={8} lg={8} sm={24} xs={24} style={{display: 'flex', justifyContent: 'center'}}>
+                            <a href={e.link} target='_blank' rel="noreferrer" key={idx}> <Card
+                                hoverable
+                                style={{ width: 250, height: 400, margin: 15, backgroundColor: '#f2f2f0' }}
+                                cover={<img alt={e.title} src={e.cover} width={'20%'} />}>
+                                <Meta title={e.title} description={e.description} />
+                            </Card> </a>
+                        </Col>
+                    })}
+                </Row>
             </div>
         </div>
     )
