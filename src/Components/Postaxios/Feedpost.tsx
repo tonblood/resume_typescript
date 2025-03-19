@@ -5,12 +5,15 @@ import { Button, message } from 'antd';
 import PostComponent from './PostComponent';
 import CreatePost from '../Postaxios/CreatePost';
 import EditPostComponent from './EditPostComponent';
+import { ArrowLeftOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const Feedpost = () => {
     const posturl = "https://jsonplaceholder.typicode.com/posts"
     const [postidx, setPostIdx] = useState<number>(1);
     const [post, setPost] = useState<post>();
     const [editchecked, setEditChecked] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`${posturl}/${postidx}`)
@@ -53,6 +56,7 @@ const Feedpost = () => {
     return (
         <div className='feed'>
             <div className='feed-nav'>
+            <ArrowLeftOutlined onClick={() => { navigate('/') }} />
                 <p>CottonBook</p>
             </div>
             <div style={{ margin: '10px 20%' }}>

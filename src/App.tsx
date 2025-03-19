@@ -6,27 +6,22 @@ import TodoList from './Components/todominiProject/TodoList';
 import PrivateRoute from './Components/PrivateRoute';
 import Feedpost from './Components/Postaxios/Feedpost';
 import Flashcard from './Components/Flashcard/Flashcard';
-import GoServiceForm from './Components/GoForm/GoServiceForm';
-import Test from './Components/Test';
 import ChartJS from './Components/ChartJS/ChartJS';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Loginpage />} />
-        <Route path="/" element={<PrivateRoute />} >
-          
-          <Route path='/resume' element={<Resume />} />
+        {/* <Route path="/" element={<Loginpage />} />
+        <Route path="/" element={<PrivateRoute />} > */}
+          <Route path='/' element={<Resume />} />
           {/* <PostContext.Provider value={{post,setPost}} > */}
-          <Route path='/resume/todolist' element={<TodoList />} />
-          <Route path='/resume/feedpost' element={<Feedpost />} />
-          <Route path='/resume/flashcard' element={<Flashcard/>}/>
-          <Route path='/goserviceform' element={<GoServiceForm/>} />
-          <Route path='/resume/test' element={<Test/>} />
-          <Route path='/resume/chart' element={<ChartJS total={10} complete={0} uncomplete={10}/>} />
+          <Route path='/todolist' element={<TodoList />} />
+          <Route path='/feedpost' element={<Feedpost />} />
+          <Route path='/flashcard' element={<Flashcard/>}/>
+          <Route path='/chart' element={<ChartJS total={10} complete={0} uncomplete={10}/>} />
           {/* </PostContext.Provider> */}
-        </Route>
+        {/* </Route> */}
       </Routes>
     </BrowserRouter>
   );

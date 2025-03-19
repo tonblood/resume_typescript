@@ -60,7 +60,6 @@ const Loginpage= () => {
         </Button>
       </Form.Item>
     </Form>
-      {process.env.NODE_ENV}
     </div>
   );
 };

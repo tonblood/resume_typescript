@@ -17,7 +17,7 @@ const Cardlist = (props: Param) => {
 
         <div className='cardbox eng'>
             <h1>{props.word.word}</h1>
-            <p> <b> Description : </b>  {props.word.definition} </p>
+            {!tf ? <p> <b> Description : </b>  {props.word.definition} </p> : null}
             <Button size='large' onClick={() => { setTf(!tf) }}> Flip Card</Button>
         </div>
 

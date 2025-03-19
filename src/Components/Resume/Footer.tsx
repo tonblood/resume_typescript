@@ -15,7 +15,6 @@ function Footer() {
      
   return (
     <div className='footer'>
-        <Button className='btnfeed' onClick={(e) => {navigate('/resume/test')}} >Click Me</Button>
         <Modal style={{display:'flex',alignItems:'center' }} title="Hello"
           open={isModalVisible} onOk={()=>setIsModalVisible(false)} onCancel={()=>setIsModalVisible(false)}>
           <p style={{textAlign:'center'}}>Scan Here If you want to know me More</p>
